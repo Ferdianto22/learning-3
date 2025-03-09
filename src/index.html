@@ -1,106 +1,371 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio with Tailwind</title>
-    <link rel="stylesheet" href="./output.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="bg-gray-100 font-sans">
-
+  <body class="bg-gray-900 text-white font-sans">
     <!-- Header/Navbar -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-gray-800">Ferdianto.Dev</h1>
-            <nav class="space-x-4">
-                <a href="#" class="text-gray-600 hover:text-blue-500">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-500">About</a>
-                <a href="#footer" class="text-gray-600 hover:text-blue-500">Contact Me</a>
-            </nav>
+    <header class="fixed w-full bg-gray-900/80 backdrop-blur-md z-50 shadow-lg">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a href="#" class="text-2xl font-bold">
+            <span
+              class="bg-gradient-to-r from-indigo-500 to-emerald-500 text-transparent bg-clip-text"
+              >Ferdianto</span
+            ><span class="text-white">.Dev</span>
+          </a>
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white transition relative after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-emerald-500 after:bottom-[-4px] after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-300 hover:text-white transition relative after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-emerald-500 after:bottom-[-4px] after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >About</a
+            >
+            <a
+              href="#hobbies"
+              class="text-gray-300 hover:text-white transition relative after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-emerald-500 after:bottom-[-4px] after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Hobbies</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-300 hover:text-white transition relative after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-indigo-500 after:to-emerald-500 after:bottom-[-4px] after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >Contact</a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-300 hover:text-white"
+            >
+              <i class="bx bx-menu text-3xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden container mx-auto px-6 pb-4"
+      >
+        <div class="bg-gray-800 rounded-lg p-4">
+          <div class="flex flex-col space-y-4">
+            <a href="#" class="text-gray-300 hover:text-white">Home</a>
+            <a href="#about" class="text-gray-300 hover:text-white">About</a>
+            <a href="#hobbies" class="text-gray-300 hover:text-white"
+              >Hobbies</a
+            >
+            <a href="#contact" class="text-gray-300 hover:text-white"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-blue-500 text-white py-40 text-center">
-        <h2 class="text-3xl md:text-5xl font-bold">Halo, Saya Ferdianto</h2>
-        <p class="mt-3 text-lg md:text-xl">Member of Frontend Developer at GDGoC</p>
+    <section
+      class="bg-[url('https://images.unsplash.com/photo-1617042375876-a13e36732a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center relative h-screen flex items-center justify-center"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"
+      ></div>
+      <div class="container mx-auto px-6 text-center z-10">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">
+          Halo, Saya
+          <span
+            class="bg-gradient-to-r from-indigo-500 to-emerald-500 text-transparent bg-clip-text relative"
+            >Ferdianto</span
+          >
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          Member of Frontend Developer at GDGoC
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#about"
+            class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full transition shadow-lg"
+          >
+            Tentang Saya
+          </a>
+          <a
+            href="#contact"
+            class="px-6 py-3 border border-white hover:bg-white hover:text-gray-900 rounded-full transition"
+          >
+            Hubungi Saya
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="container mx-auto px-4 py-40">
-        <h3 class="text-2xl font-bold text-gray-800">Tentang Saya</h3>
-        <p class="mt-4 text-gray-600 leading-relaxed">
-            Saya adalah seorang frontend developer yang memiliki minat besar pada web development. Dalam hal teknis, saya telah mempelajari HTML, CSS, Javascript, dan framework lainnya untuk menciptakan tampilan yang modern dan efisien. Saya juga senang mengikuti tren desain terbaru serta selalu berusaha agar hasil kerja saya tidak hanya menarik secara visual, tetapi juga mudah digunakan oleh pengguna.
-        </p>
-
-            <h4 class="text-2xl font-bold text-gray-800 pt-15">Hobi Saya</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/Tanboy Kun.jpg" alt="Makan" class="w-full h-74 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Makan</h4>
-                        <p class="text-gray-600 mt-2">Saya "sedikit" hobi makan.</p>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/Ijat Tidur.jpg" alt="Tidur" class="w-full h-74 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Tidur</h4>
-                        <p class="text-gray-600 mt-2">Tidur adalah healing terbaik.</p>
-                    </div>
-                </div>
-                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                    <img src="/images/Ngoding.jpg" alt="Ngoding" class="w-full h-74 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-bold text-lg">Ngoding</h4>
-                        <p class="text-gray-600 mt-2">Ngoding dengan error sedikit mungkin.</p>
-                    </div>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <div class="relative">
+              <div
+                class="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500 mx-auto"
+              >
+                <img
+                  src="/images/Foto Profil.jpg"
+                  alt="Ferdianto"
+                  class="w-full object-cover"
+                />
+              </div>
             </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-2">
+              <span
+                class="bg-gradient-to-r from-indigo-500 to-emerald-500 text-transparent bg-clip-text"
+                >Tentang Saya</span
+              >
+            </h2>
+            <div class="w-20 h-1 bg-indigo-500 mb-6"></div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Halo! Saya Ferdianto, seorang frontend developer dengan passion
+              untuk menciptakan pengalaman digital yang menarik dan intuitif.
+              Saya memiliki keahlian dalam HTML, CSS, JavaScript, dan berbagai
+              framework modern seperti React dan Tailwind CSS.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+              Sebagai member Frontend Developer di GDGoC, saya terus
+              mengembangkan keterampilan saya dan belajar teknologi terbaru.
+              Saya percaya bahwa desain yang baik tidak hanya tentang estetika,
+              tetapi juga tentang fungsionalitas dan pengalaman pengguna.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-24 bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold">
+            <span
+              class="bg-gradient-to-r from-indigo-500 to-emerald-500 text-transparent bg-clip-text"
+              >Hobi Saya</span
+            >
+          </h2>
+          <div class="w-20 h-1 bg-indigo-500 mx-auto my-4"></div>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Berikut hobi saya untuk mengisi waktu luang saya di tengah sibuknya
+            kuliah
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Hobi Makan -->
+          <div
+            class="rounded-xl overflow-hidden bg-gray-800 shadow-lg transform transition duration-300 hover:scale-105"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Makan"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-2xl font-bold">Makan</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-300">Saya "sedikit" hobi makan.</p>
+              <div class="flex mt-4 space-x-2">
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Makanan</span
+                >
+                <span
+                  class="bg-emerald-900 text-emerald-100 text-xs py-1 px-2 rounded-full"
+                  >Sedikit</span
+                >
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Kenyang</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobi Tidur -->
+          <div
+            class="rounded-xl overflow-hidden bg-gray-800 shadow-lg transform transition duration-300 hover:scale-105"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+                alt="Tidur"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-2xl font-bold">Tidur</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-300">Tidur adalah healing terbaik.</p>
+              <div class="flex mt-4 space-x-2">
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Istirahat</span
+                >
+                <span
+                  class="bg-emerald-900 text-emerald-100 text-xs py-1 px-2 rounded-full"
+                  >Turu</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Hobi Ngoding -->
+          <div
+            class="rounded-xl overflow-hidden bg-gray-800 shadow-lg transform transition duration-300 hover:scale-105"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Ngoding"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-2xl font-bold">Ngoding</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-300">Ngoding dengan error sedikit mungkin.</p>
+              <div class="flex mt-4 space-x-2">
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Pusing</span
+                >
+                <span
+                  class="bg-emerald-900 text-emerald-100 text-xs py-1 px-2 rounded-full"
+                  >Stress</span
+                >
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Capek</span
+                >
+                <span
+                  class="bg-emerald-900 text-emerald-100 text-xs py-1 px-2 rounded-full"
+                  >Error</span
+                >
+                <span
+                  class="bg-indigo-900 text-indigo-100 text-xs py-1 px-2 rounded-full"
+                  >Mual</span
+                >
+                <span
+                  class="bg-emerald-900 text-emerald-100 text-xs py-1 px-2 rounded-full"
+                  >Pingsan</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <footer id="footer" class="bg-neutral-900 text-white py-20 mt-20">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between gap-16 px-4">
-            <div class="mb-8 md:mb-0 flex-1">
-                <h2 class="text-lg font-bold mb-4">About Me</h2>
-                <p class="text-gray-400">
-                    I'm a passionate developer creating stunning front-end designs and seamless user experiences.
-                </p>
-            </div>
-    
-            <div class="flex-1">
-                <h2 class="text-lg font-bold mb-4 text-center md:text-left">Contact Me</h2>
-                <div class="text-gray-200">
-                    <div class="flex space-x-6 justify-center md:justify-start items-center mt-4">
-                        <a href="https://www.linkedin.com/in/ferdianto-/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-blue-500">
-                            <i class="bx bxl-linkedin text-2xl"></i>
-                            <span class="ml-2">LinkedIn</span>
-                        </a>
-    
-                        <a href="https://github.com/Ferdianto22" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-gray-300">
-                            <i class="bx bxl-github text-2xl"></i>
-                            <span class="ml-2">GitHub</span>
-                        </a>
-    
-                        <a href="https://www.instagram.com/ferdiantoz" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-pink-500">
-                            <i class="bx bxl-instagram text-2xl"></i>
-                            <span class="ml-2">Instagram</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <footer id="footer" class="bg-gray-900 text-white py-20 mt-20">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between gap-16 px-4"
+      >
+        <div class="mb-8 md:mb-0 flex-1">
+          <h2 class="text-lg font-bold mb-4">About Me</h2>
+          <p class="text-gray-400">
+            Saya seorang developer yang fokus pada web development dengan desain
+            yang menarik dan pengalaman pengguna yang baik.
+          </p>
         </div>
-    
-        <div class="mt-8 text-center text-sm text-gray-500">
-            © 2025 My Website. All Rights Reserved.
+
+        <div class="flex-1">
+          <h2 class="text-lg font-bold mb-4 text-center md:text-left">
+            Contact Me
+          </h2>
+          <div class="text-gray-200">
+            <div
+              class="flex space-x-6 justify-center md:justify-start items-center mt-4"
+            >
+              <a
+                href="https://www.linkedin.com/in/ferdianto-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-400 hover:text-blue-500"
+              >
+                <i class="bx bxl-linkedin text-2xl"></i>
+                <span class="ml-2">LinkedIn</span>
+              </a>
+
+              <a
+                href="https://github.com/Ferdianto22"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-400 hover:text-gray-300"
+              >
+                <i class="bx bxl-github text-2xl"></i>
+                <span class="ml-2">GitHub</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/ferdiantoz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-400 hover:text-pink-500"
+              >
+                <i class="bx bxl-instagram text-2xl"></i>
+                <span class="ml-2">Instagram</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="mt-8 text-center text-sm text-gray-500" id="contact">
+        © 2025 My Website. All Rights Reserved.
+      </div>
     </footer>
-    
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
 
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
